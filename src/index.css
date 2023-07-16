@@ -6,6 +6,26 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.darkMode{
+  background-color: black;
+  
+}
+.darkMode h1{
+  color: rgb(99, 99, 99);
+}
+.toggle-button{
+  outline: none;
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+  border: none;
+  background-color: rgb(118, 114, 114);
+}
 .container{
   max-width: 960px;
   margin-right: auto;
@@ -14,6 +34,7 @@ body {
   padding-right: 15px;
   padding-top: 20px;
   padding-bottom: 20px;
+  min-height: 100vh;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -68,7 +89,7 @@ textarea:focus{
 }
 
 .note{
-  background-color: #fef68a;
+  background-color: #6908d8;
   border-radius: 10px;
   padding: 1rem;
   min-height: 170px;
