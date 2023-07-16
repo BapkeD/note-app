@@ -6,6 +6,7 @@ import Search from './componets/search';
 
 const App = () => {
     const [notes, setNotes] = useState([]);
+    const [searchText, setSearchText] = useState('');
 
     const addNote = (text) => {
         const date = new Date();
@@ -25,8 +26,10 @@ const App = () => {
 
     return (
         <div className='container'>
-            <Search />
-            <NoteList notes={notes}
+            <h1>Notes</h1>
+            <Search handleSearchNote={setSearchText}  />
+            <NoteList
+             notes={notes.filter((note)=> note.text.toLowerCase().includes(searchText))}
             handleDeleteNote={deleteNote}
             handleAddNote={addNote} />
             
