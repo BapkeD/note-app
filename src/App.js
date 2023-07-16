@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import NoteList from './componets/NoteList';
 import { nanoid } from 'nanoid';
+import Search from './componets/search';
 
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
 
     return (
         <div className='container'>
+            <Search />
             <NoteList notes={notes}
             handleDeleteNote={deleteNote}
             handleAddNote={addNote} />
